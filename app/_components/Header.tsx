@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 
@@ -6,19 +7,19 @@ function Header() {
   return (
 <header className="bg-[#07193a]">
   <div className="mx-auto flex h-16 max-w-screen-2xl items-center gap-8 px-2 sm:px-6 lg:px-10">
-    <Image src="/chitlogo1.svg" alt="logo" width={70} height={80}/>
+    <Image src="/chitlogo1.svg" alt="logo" width={70} height={80}  />
     
     <div className="flex flex-1 items-center justify-end md:justify-between ">
       <nav aria-label="Global" className="hidden md:block">
         <ul className="flex items-center gap-6 text-sm">
           <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="/Plans"> Plans </a>
+            <Link className="text-white transition hover:text-gray-500/75" href="/Plans"> Plans </Link>
           </li>
           <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="/About">About</a>
+            <Link className="text-white transition hover:text-gray-500/75" href="/About">About</Link>
           </li>
            <li>
-            <a className="text-gray-500 transition hover:text-gray-500/75" href="/Contact"> Contact</a>
+            <Link className="text-white transition hover:text-gray-500/75" href="/Contact"> Contact</Link>
           </li>
         {/*
           <li>

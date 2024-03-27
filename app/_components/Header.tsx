@@ -1,4 +1,5 @@
-import { UserButton, auth } from "@clerk/nextjs";
+import { SignInButton, SignUpButton, UserButton, auth } from "@clerk/nextjs";
+import { SignedIn } from "@clerk/nextjs/app-beta/client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -62,27 +63,29 @@ async function Header() {
 
           <div className="flex items-center gap-4">
             {userId ? (
+            
               <div className="flex gap-4 items-center">
                 {/* <Link href="/dashboard">Dashboard</Link> */}
                 <UserButton afterSignOutUrl="/" />
               </div>
-            ) : (
+           
+           ) : ( 
               <div className="sm:flex sm:gap-4">
-                <Link
-                  href="/sign-in"
+                <a
+                
                   className="block rounded-mdpx-5 py-2.5 text-sm font-medium text-white transition"
                 >
-                  Login
-                </Link>
+                  <SignInButton />
+                </a>
 
-                <Link
-                  href="/sign-up"
+                <a
+          
                   className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium  transition  sm:block"
                 >
-                  Register
-                </Link>
+                 <SignUpButton />
+                </a>
               </div>
-            )}
+             )} 
 
             {/* <button
           className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden"

@@ -1,5 +1,5 @@
 import { SignInButton, SignUpButton, UserButton, auth } from "@clerk/nextjs";
-import { SignedIn } from "@clerk/nextjs/app-beta/client";
+
 
 import Image from "next/image";
 import Link from "next/link";
@@ -8,7 +8,7 @@ import React from "react";
 async function Header() {
   const { userId } = auth();
 
-  // console.log(user);
+  // console.log(userId);
 
   return (
     <header className="bg-[#07193a]">
@@ -46,6 +46,18 @@ async function Header() {
                   Contact
                 </Link>
               </li>
+              {userId==="user_2e2pZYrpYk7p55XIVG8OHnVbS6T" && (
+
+              <li>
+                <Link
+                  className="text-white transition hover:text-gray-500/75"
+                  href="/Contact"
+                >
+                  {" "}
+                  Admin
+                </Link>
+              </li>
+              )}
               {/*
           <li>
             <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
@@ -94,7 +106,7 @@ async function Header() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-5 w-5"
-            fill="none"
+            fi\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
             strokeWidth="2"

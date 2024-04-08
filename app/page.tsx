@@ -1,6 +1,10 @@
+
+"use client"
 import Image from "next/image";
 import Header from "./_components/Header";
-import { auth } from "@clerk/nextjs";
+import { auth, useSession } from "@clerk/nextjs";
+import useStoreUserEffect from "@/hooks/useStoreuser";
+import { useConvexAuth } from "convex/react";
 
 export default function Home() {
   // if (userId) {
@@ -10,6 +14,12 @@ export default function Home() {
   //     </div>
   //   );
   // }
+  const {isAuthenticated,isLoading}=useConvexAuth()
+    const {session} = useSession();
+    useStoreUserEffect()
+    if (session!==undefined){
+      console.log(session)
+    }
   return (
     //main div
     <div className="overflow-hidden">

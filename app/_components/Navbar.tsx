@@ -47,7 +47,7 @@ async function Navbar() {
                 <li>
                   <Link
                     className="text-black transition hover:text-gray-500/75 no-underline"
-                    href="/Contact"
+                    href="/Admin"
                   >
                     {" "}
                     Admin

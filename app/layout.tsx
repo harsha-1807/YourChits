@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./_components/Header";
-import { ClerkProvider } from "@clerk/nextjs";
+
+import { ClerkProvider, Protect } from "@clerk/nextjs";
 import { ConvexClient } from "convex/browser";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { Providers } from "./providers";
 import Navbar from "./_components/Navbar";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,8 +25,11 @@ export default function RootLayout({
     <html lang="en" className="bg-[#CBD6CC]">
       <body className={inter.className}>
         <Providers>
+        
+
           <Navbar/>
-          {/* <Header /> */}
+     
+       
           {children}
         </Providers>
       </body>

@@ -32,7 +32,6 @@ Your Chits is a web-based platform revolutionizing chit fund management, offerin
 
 ## Daily Plan :
 
-
 Day 1: Creating a flowchart for user and admin flow.
 
 Day 2:  Initiating github repo and readme file. 

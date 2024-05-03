@@ -7,7 +7,7 @@ import { ConvexClient } from "convex/browser";
 import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { Providers } from "./providers";
 import Navbar from "./_components/Navbar";
-
+import Footer from "./_components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,12 +25,15 @@ export default function RootLayout({
     <html lang="en" className="bg-[#CBD6CC]">
       <body className={inter.className}>
         <Providers>
-        
+          <Navbar />
 
-          <Navbar/>
-     
-       
           {children}
+          <br />
+          
+          <div className="">
+            <Footer />
+          </div>
+          {/* <Footer />  */}
         </Providers>
       </body>
     </html>

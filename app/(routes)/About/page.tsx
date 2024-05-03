@@ -2,11 +2,8 @@ import React from 'react'
 
 function About() {
   return (
-    <div className=''>
-{/* 
-<video width="100050" height="500" controls >
-      <source src="savemoney.mp4" type="video/mp4"/>
-     </video> */}
+    <div className='text-center h-[40vh] w-screen'>
+      AboutUs Page
     </div>
   )
 }

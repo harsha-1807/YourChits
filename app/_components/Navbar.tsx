@@ -72,16 +72,16 @@ async function Navbar() {
           {userId ? (
             <div className="flex gap-4 items-center poppins-semibold">
               {/* <Link href="/dashboard">Dashboard</Link> */}
-              <OrganizationSwitcher afterSelectOrganizationUrl="/"	/>
+              {/* <OrganizationSwitcher afterSelectOrganizationUrl="/"	/> */}
               <UserButton afterSignOutUrl="/" />
             </div>
           ) : (
             <div className="sm:flex sm:gap-4">
               <a className="block rounded-mdpx-5 py-2.5 text-sm font-medium text-black transition poppins-semibold">
-                <SignInButton />
+                <SignInButton mode="modal" />
               </a>
               <a className="hidden rounded-full bg-[#E3432B] px-5 py-2.5 text-sm font-medium  transition  sm:block poppins-semibold">
-                <SignUpButton />
+                <SignUpButton mode="modal" />
               </a>
             </div>
           )}

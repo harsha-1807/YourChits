@@ -16,11 +16,23 @@ function Plans() {
     // console.log(plan)
   };
 
-  const Data = useQuery(api.plans.getAllPlans)
-
-  if (Data == undefined){
-    return 
+  const PlansData = useQuery(api.plans.getAllPlans)
+  if (!PlansData) {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        Loading...
+      </div>
+    );
   }
+
+  if (PlansData==null || undefined || "") {
+    return (
+      <div className="flex items-center justify-center h-screen">
+        Error: Error loading the data
+      </div>
+    );
+  }
+  
 
   return (
     <div>
@@ -31,8 +43,9 @@ function Plans() {
           </h2>
 
           <div className="grid gap-6 md:mx-auto md:w-8/12 lg:w-full lg:grid-cols-3">
-           
-            {Data.map((plan, index) => (
+       
+
+            {PlansData.map((plan, index) => (
               <div
                 key={index}
                 className="group space-y-6 border border-gray-100 dark:border-gray-700 rounded-3xl bg-white dark:bg-gray-800 px-8 py-12 text-center shadow-2xl shadow-gray-600/10 dark:shadow-none hover:scale-105 transition-transform"
@@ -43,7 +56,7 @@ function Plans() {
                 </h3>
                 <p>{plan.amount}</p>
                 <p>{plan.months}</p>
-                <Button onClick={() => handlePlanSelect(plan)}>View Details</Button>
+                <Button key={index} onClick={() => handlePlanSelect(plan)}>View Details</Button>
               </div>
             ))}
           </div>

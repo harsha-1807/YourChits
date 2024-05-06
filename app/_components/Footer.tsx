@@ -6,7 +6,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="shadow-xl bg-[#F2EDE3] ">
+    <footer className="shadow-xl bg-[#F2EDE3] w-[100%] ">
       <div className="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>

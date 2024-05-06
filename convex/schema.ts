@@ -9,18 +9,12 @@ export default defineSchema({
     tokenIdentifier: v.string(),
   }),
   plans: defineTable({
+    plancode: v.float64(),
     name: v.string(),
-    amount: v.number(),
-    duration: v.number(), //month
-    installment: v.object({
-        kind: v.number(), //month number
-        value: v.number(), // amount for the month to pay
-    }),
-    chitamount: v.object({
-        kind: v.number(), //month number
-        value: v.number(), // amount for the month to withdraw
-    }),
-    maxsub: v.number(),
+    amount: v.float64(),
+    months: v.float64(),
+    chitamount: v.array(v.float64()),
+    installment: v.array(v.float64()),
   }),
   
   

@@ -29,7 +29,7 @@ async function Navbar() {
               <li>
                 <Link
                   className="text-black transition hover:text-gray-500/75 no-underline"
-                  href="/Dashboard"
+                  href="/Plans"
                 >
                   {" "}
                   Plans{" "}

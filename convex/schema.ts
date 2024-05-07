@@ -9,12 +9,12 @@ export default defineSchema({
     tokenIdentifier: v.string(),
   }),
   plans: defineTable({
-    plancode: v.float64(),
+    plancode: v.number(),
     name: v.string(),
-    amount: v.float64(),
-    months: v.float64(),
-    chitamount: v.array(v.float64()),
-    installment: v.array(v.float64()),
+    amount: v.number(),
+    months: v.number(),
+    chitamount: v.array(v.number()),
+    installment: v.array(v.number()),
   }),
   
   

@@ -51,7 +51,6 @@ const PlanForm: React.FC = () => {
     index: number
   ) => {
     const newChitAmount = [...formData.chitamount];
-    e.preventDefault();
     newChitAmount[index] = parseInt(e.target.value);
     setFormData({
       ...formData,
@@ -64,7 +63,6 @@ const PlanForm: React.FC = () => {
     index: number
   ) => {
     const newInstallment = [...formData.installment];
-    e.preventDefault();
     newInstallment[index] = parseInt(e.target.value);
     setFormData({
       ...formData,

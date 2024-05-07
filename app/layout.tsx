@@ -8,6 +8,7 @@ import { ConvexProviderWithClerk } from "convex/react-clerk";
 import { Providers } from "./providers";
 import Navbar from "./_components/Navbar";
 import Footer from "./_components/Footer";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,8 +29,9 @@ export default function RootLayout({
           <Navbar />
 
           {children}
+
           <br />
-          
+          <Toaster position="bottom-center" toastOptions={{ style: { background: 'black' } }} />
           <div className="">
             <Footer />
           </div>

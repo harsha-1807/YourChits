@@ -112,7 +112,7 @@ export default function Home() {
             <div className="w-[16vw]">
               <h2 className="prosto-one-s">Withdraw</h2>
               <p className="poppins-semibold">
-                Get the plan's respective money whenever you want
+                Get the plans respective money whenever you want
               </p>
             </div>
           </div>
